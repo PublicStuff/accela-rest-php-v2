@@ -7,8 +7,8 @@
 require '../src/ConstructAPI.php';
 
 // App, agency & environment settings.
-$app_id = '635502785397498905';
-$app_secret = 'f8529997f4b04d2e8f2bd082d944e31a'; 
+$app_id = '';
+$app_secret = ''; 
 $token;
 $environment = 'TEST';
 $agency = 'Islandton';
