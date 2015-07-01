@@ -1,4 +1,4 @@
-# PHP Class Library for the Accela API (v3)
+# PHP Library for the Accela Construct API
 
 ## Usage
 
@@ -10,7 +10,7 @@ For example, to [search for specific records](https://developer.accela.com/docs/
 
 The constructor and destructor methods for any custom classes you need to create will always be the same - use these methods on your custom class to pass the required parameters to the base class constructor.
 
-You can create methods for this custom class that perform the operations you wish to execute against the Construct API. For example, the search recods method of the Construct API performs an HTTP POST, so you'll want to leverage the ```sendPost``` method of the base class.
+You can create methods for this custom class that perform the operations you wish to execute against the Construct API. For example, the [search recods method](https://developer.accela.com/docs/api_reference/v4.post.search.records.html) of the Construct API performs an HTTP POST, so you'll want to leverage the ```sendPost``` method of the base class.
 
 The method you implement for this in your custom class can have a signature that differs from the ```sendPost``` method of the base class, so long as when this base method is called all required arguements are passed. 
 
