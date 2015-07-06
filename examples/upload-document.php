@@ -4,7 +4,7 @@
  * A simple script to test the Accela PHP class library.
  */
 
-include '../src/Construct.php';
+include '../src/ConstructAPI.php';
 
 // App, agency & environment settings.
 $app_id = '';
