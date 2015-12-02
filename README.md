@@ -6,7 +6,7 @@ Clone this repo or download and extract the ```/src``` folder to a directory of 
 
 Extend the base ```ConstructAPI``` class based on how you want to use the Construct API.
 
-For example, to [search for specific records](https://developer.accela.com/docs/api_reference/v4.post.search.records.html) create a new class that leverages the ```sendPost``` method of the base class.
+For example, to [search for specific records](https://developer.accela.com/docs/api_reference/v4.post.search.records.html) create a new class that leverages the ```sendPost``` method of the base class (see below).
 
 The constructor and destructor methods for any custom classes you need to create will always be the same - use these methods on your custom class to pass the required parameters to the base class constructor.
 
@@ -66,3 +66,18 @@ If you need a test token for developing against the Construct API, you can gener
 2. On the lower left, click on [Get an API Test Token](https://developer.accela.com/TestToken/Index).
 3. Enter the agency name (Islandton for testing).
 4. Enter the scope for the test token - this is a space delimited list of scope identifiers from the [API reference page](https://developer.accela.com/docs/).
+
+## Getting a token programmatically
+
+You can also use the ```getTokenWithPassword``` method of the CivicID class to programmatically obtain a token.
+
+```php
+// Create a new CivicID object.
+$auth = new CivicID($app_id, $app_secret, $environment, $agency_name, 'records');
+
+// Request a token with user id and password.
+$response = $auth->getTokenWithPassword($userid, $password);
+
+// Use the new token.
+$new_token = $response->access_token;
+```

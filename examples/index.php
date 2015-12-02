@@ -5,7 +5,6 @@
  */
 
 // Include required files.
-require '../src/Scopes.php';
 require '../src/CivicID.php';
 
 // Settings for OAuth.
